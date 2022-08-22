@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: frases-motivacionais-dev-mentor.vercel.app
+Token: e65a8e3d46ae78c95713a10bf6dd33eb1b0075061cc23c637b128d42fa21471c
