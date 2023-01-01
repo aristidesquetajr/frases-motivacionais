@@ -1,59 +1,71 @@
-* {
-  font-family: "Poppins", sans-serif;
-}
-
 body {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
   background-color: #041536;
 }
 
 main.container {
   max-width: 773px;
-  min-width: 358px;
+  min-width: 310px;
   width: 90%;
   display: flex;
   flex-direction: column;
-  gap: 36px;
 }
 
 h1 {
-  color: #16f57d;
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 2.5em;
   text-align: center;
+  color: #16f57d;
 }
 
 .content {
   position: relative;
-  background-color: #021319;
-  padding: 3rem 5rem 6rem;
-  color: #fff;
-  border-radius: 8px;
+  height: 400px;
   display: flex;
   flex-direction: column;
-  place-items: center;
-}
-
-.row {
-  display: flex;
-  gap: 0.5rem;
-  place-items: center;
-  color: #f2f2f2;
+  align-items: center;
+  justify-content: center;
+  background-color: #021319;
+  color: #fff;
+  border-radius: 16px;
   box-sizing: border-box;
-}
-
-hr {
-  width: 100%;
-  min-width: 250px;
+  padding: 2rem;
 }
 
 .content p#text {
   font-size: 2em;
-  font-weight: 700;
+  text-align: justify;
+  transition: all 0.3s ease;
+}
+
+.row {
+  width: 100%;
+  position: relative;
+  color: #f2f2f2;
   text-align: center;
-  padding: 1rem;
+}
+
+.row::before, .row::after {
+  width: 45%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #fff;
+}
+
+.row::before {
+  left: 0;
+}
+
+.row::after {
+  right: 0;
 }
 
 .refresh {
@@ -77,17 +89,23 @@ hr {
   object-fit: cover;
 }
 
-@media screen and (max-width: 630px) {
-  hr {
-    min-width: 150px;
-  }
-}
-
 @keyframes animati {
   to {
     transform: rotate(360deg);
   }
   from {
     transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .content p#text {
+    font-size: 1.6rem;
+  }  
+}
+
+@media screen and (max-width: 380px) {
+  .content p#text {
+    font-size: 1.4rem;
   }
 }
